@@ -2,11 +2,14 @@
 
         Base system by kaufman
     
-        - 
+         - The system simply gives you a skeleton to create bases.
+         - You can add a spawn point and a checkpoint for the two teams that will join the base.
+         - These are all dynamically set in-game and can be changed at any time.
+         - I didn't want to create extra columns in the MySQL tables, so I kept the positions as strings,
+           but I added the sample code on line 238 to illustrate how you can convert them to float values.
+         - On line 42, set your MySQL information to your own!
 
 */
-
-#define SSCANF_NO_NICE_FEATURES
 
 #include <a_samp>
 #include <a_mysql>                      // https://github.com/pBlueG/SA-MP-MySQL/releases/tag/R41-4
@@ -14,7 +17,7 @@
 #include <YSI/YSI_Data/y_iterate>       // https://github.com/pawn-lang/YSI-Includes/releases/tag/v5.06.1932
 #include <YSI/YSI_Visual/y_commands>    // https://github.com/pawn-lang/YSI-Includes/releases/tag/v5.06.1932
 
-#define MAX_BASES           (50)
+#define MAX_BASES           (50)        // Maximum number of bases that can be created
 
 enum e_bases
 {
@@ -232,12 +235,12 @@ CMD:base(playerid, params[])
     return 1;
 }
 
-CMD:startbase(playerid, params[])
+CMD:splitspawn(playerid, params[])
 {
     new id;
 
     if (sscanf(params, "d", id))
-        return SendClientMessage(playerid, 0x92B4ECFF, "(usage) {F9F9F9}/startbase [id]");
+        return SendClientMessage(playerid, 0x92B4ECFF, "(usage) {F9F9F9}/splitspawn [id]");
 
     new Float: pos[3];
 

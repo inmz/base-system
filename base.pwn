@@ -14,8 +14,8 @@
 #include <a_samp>
 #include <a_mysql>                      // https://github.com/pBlueG/SA-MP-MySQL/releases/tag/R41-4
 #include <sscanf2>                      // https://github.com/Y-Less/sscanf/releases/tag/v2.13.8
-#include <YSI/YSI_Data/y_iterate>       // https://github.com/pawn-lang/YSI-Includes/releases/tag/v5.06.1932
-#include <YSI/YSI_Visual/y_commands>    // https://github.com/pawn-lang/YSI-Includes/releases/tag/v5.06.1932
+#include <YSI_Data/y_iterate>		// https://github.com/pawn-lang/YSI-Includes/releases/tag/v5.06.1932
+#include <YSI_Visual/y_commands>	// https://github.com/pawn-lang/YSI-Includes/releases/tag/v5.06.1932
 
 #define MAX_BASES           (50)        // Maximum number of bases that can be created
 

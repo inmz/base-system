@@ -102,7 +102,7 @@ CMD:base(playerid, params[])
     else if (!strcmp(input, "def", false)) command_id = 4;
     else if (!strcmp(input, "cp", false)) command_id = 5;
     else if (!strcmp(input, "delete", false)) command_id = 6;
-	else return SendClientMessage(playerid, 0x92B4ECFF, "(usage) {F9F9F9}/base [create, name, att, def, cp, delete]");
+    else return SendClientMessage(playerid, 0x92B4ECFF, "(usage) {F9F9F9}/base [create, name, att, def, cp, delete]");
 
     switch (command_id)
     {
